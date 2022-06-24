@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>GUI 3</title>
+        <link rel="stylesheet" href="css/table.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+    </head>
+    <body>
+        <!-- Button to open offcanvas with form using data-bs-target -->
+        <div class="container">
+            <h2>Multiplication Table Generator</h2>
+            <button type="button" class="btn btn-dark text-center" data-bs-toggle="offcanvas" data-bs-target="#inputform" aria-controls="inputform">Edit</button>
+             <!-- Table should go here -->
+            <div class="container" id="multTable">
+            </div>
+        </div>
+        <!-- Start to the offcanvas, holding the form -->
+        <div class="offcanvas offcanvas-start show" tabindex="-1" id="inputform" aria-labelledby="inputformLabel">
+
+            <!-- Offcanvas header with close button -->
+            <div class="offcanvas-header">
+                <h3 class="offcanvas-title" id="inputformLabel">Edit Table</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+
+            <!-- Offcanvas body with form and additional information -->
+            <div class="offcanvas-body">
+                <form action="" class="row g-2 needs-validation align-items-center" id="tablegen" name="tablegen">
+                    <h6>Multiplier</h6>
+                    <div class="col-md-5">
+                        <div class="form-floating">
+                            <input type="number" class="form-control" name="lowerBound1" id="lowerBound1" placeholder="Lower bound" min="-50" max="" required></input>
+                            <label for="lowerBound1">Lower</label>
+                            <div class="invalid-feedback">
+                               Please enter a valid value.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="form-floating">
+                            <input type="number" class="form-control" name="upperBound1" id="upperBound1" placeholder="Upper bound" min="" max="50" required></input>
+                            <label for="upperBound1">Upper</label>
+                            <div class="invalid-feedback">
+                                Please enter a valid value.
+                            </div>
+                        </div>
+                    </div>
+                   <h6>Multiplicand</h6> 
+                    <div class="col-md-5">
+                        <div class="form-floating">
+                            <input type="number" class="form-control" name="lowerBound2" id="lowerBound2" placeholder="Lower bound" min="-50" max="" required></input>
+                            <label for="lowerBound2">Lower</label>
+                            <div class="invalid-feedback">
+                               Please enter a valid value.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="form-floating">
+                            <input type="number" class="form-control" name="upperBound2" id="upperBound2" placeholder="Upper bound" min="" max="50" required></input>
+                            <label for="upperBound2">Upper</label>
+                            <div class="invalid-feedback">
+                                Please enter a valid value.
+                            </div>
+                        </div>
+                    </div>
+                    <p>No values less than -50 may be used, and no values greater than 50 may be used.</p>
+                    <div class="col-12">
+                        <button type="button, submit" class="btn btn-dark" id="generate" data-bs-dismiss="offcanvas">Generate</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script src="js/table.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

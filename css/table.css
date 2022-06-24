@@ -1,0 +1,6 @@
+tr:first-child td:first-child {
+    font-size: 0 !important;
+}
+.form-error {
+    color: red;
+}
